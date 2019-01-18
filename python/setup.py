@@ -6,11 +6,12 @@ from setuptools import setup
 from setuptools.extension import Extension
 from Cython.Build import cythonize
 
-ad3_dir = os.environ.get('AD3_DIR')
-if not ad3_dir:
-    print("Warning: please set the AD3_DIR environment variable to point"
-          "to the path where you have downloaded the AD3 library.")
-    exit(1)
+# ad3_dir = os.environ.get('AD3_DIR')
+# if not ad3_dir:
+#     print("Warning: please set the AD3_DIR environment variable to point"
+#           "to the path where you have downloaded the AD3 library.")
+#     exit(1)
+ad3_dir = os.path.abspath('../../AD3')
 
 
 ext_args = dict(
